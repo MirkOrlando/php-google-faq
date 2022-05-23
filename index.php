@@ -93,11 +93,16 @@ $nav_items = [
         max-width: 1010px;
         margin: 4rem auto;
     }
+
+    .nav_items li:hover {
+        color: #0a58ca;
+        border-bottom-color: #0a58ca !important;
+    }
 </style>
 
 <body>
     <header id="site_header">
-        <nav class="border-bottom border-dark">
+        <nav class="border-bottom border-secondary">
             <div class="logo px-3 py-1">
                 <a href="#">
                     <img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" alt="">
