@@ -83,8 +83,22 @@ $nav_items = [
     <header id="site_header">
         <nav class="border-bottom border-dark">
             <div class="logo">
-                <img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" alt="">
-                <span class="fs-4">Privacy & Termini</span>
+                <a href="#">
+                    <img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" alt="">
+                    <span class="fs-4">Privacy & Termini</span>
+                </a>
+            </div>
+            <div class="nav_items">
+                <ul>
+                    <?php
+                    foreach ($nav_items as $nav_item) : ?>
+                        <li class="<?= $nav_item['is_active'] ? 'active' : '' ?>">
+                            <a href="#">
+                                <?= $nav_item['name']; ?>
+                            </a>
+                        </li>
+                    <?php endforeach ?>
+                </ul>
             </div>
         </nav>
     </header>
