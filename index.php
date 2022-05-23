@@ -79,20 +79,36 @@ $nav_items = [
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
+<style>
+    a {
+        text-decoration: none;
+        color: unset;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    .container_google {
+        max-width: 1010px;
+        margin: auto;
+    }
+</style>
+
 <body>
     <header id="site_header">
         <nav class="border-bottom border-dark">
-            <div class="logo">
+            <div class="logo px-3 py-1">
                 <a href="#">
                     <img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" alt="">
                     <span class="fs-4">Privacy & Termini</span>
                 </a>
             </div>
             <div class="nav_items">
-                <ul>
+                <ul class="d-flex p-0 m-0">
                     <?php
                     foreach ($nav_items as $nav_item) : ?>
-                        <li class="<?= $nav_item['is_active'] ? 'active' : '' ?>">
+                        <li class="mx-3 py-1 border-bottom border-3 <?= $nav_item['is_active'] ? 'border-primary text-primary' : 'border-light' ?>">
                             <a href="#">
                                 <?= $nav_item['name']; ?>
                             </a>
@@ -105,7 +121,7 @@ $nav_items = [
     <!-- /#site_header -->
 
     <main id="site_main">
-        <div class="container">
+        <div class="container_google">
             <?php
             foreach ($faqs as $faq) : ?>
                 <h4 class="my-4"><?= $faq['question'] ?></h4>
