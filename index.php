@@ -91,7 +91,7 @@ $nav_items = [
 
     .container_google {
         max-width: 1010px;
-        margin: auto;
+        margin: 4rem auto;
     }
 </style>
 
@@ -124,10 +124,10 @@ $nav_items = [
         <div class="container_google">
             <?php
             foreach ($faqs as $faq) : ?>
-                <h4 class="my-4"><?= $faq['question'] ?></h4>
+                <h4 class="mt-5 lh-sm"><?= $faq['question'] ?></h4>
                 <?php
                 foreach ($faq['answer_paragraphs'] as $answer_paragraph) : ?>
-                    <p class="my-4"><?= $answer_paragraph ?></p>
+                    <p class="my-3 lh-sm"><?= $answer_paragraph ?></p>
                 <?php endforeach ?>
             <?php endforeach ?>
         </div>
