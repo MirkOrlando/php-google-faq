@@ -59,14 +59,16 @@ $faqs = [
 <body>
     <header class="border-bottom border-dark">SITE HEADER HERE</header>
     <main>
-        <?php
-        foreach ($faqs as $faq) : ?>
-            <h2 class="my-4"><?= $faq['question'] ?></h2>
+        <div class="container">
             <?php
-            foreach ($faq['answer_paragraphs'] as $answer_paragraph) : ?>
-                <p class="my-4"><?= $answer_paragraph ?></p>
+            foreach ($faqs as $faq) : ?>
+                <h2 class="my-4"><?= $faq['question'] ?></h2>
+                <?php
+                foreach ($faq['answer_paragraphs'] as $answer_paragraph) : ?>
+                    <p class="my-4"><?= $answer_paragraph ?></p>
+                <?php endforeach ?>
             <?php endforeach ?>
-        <?php endforeach ?>
+        </div>
     </main>
 
     <!-- Bootstrap JavaScript Libraries -->
