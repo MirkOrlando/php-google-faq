@@ -38,6 +38,29 @@ $faqs = [
         ]
     ]
 ];
+$nav_items = [
+    [
+        "name" => "Introduzione",
+        "is_active" => false,
+    ],
+    [
+        "name" => "Norme sulla privacy",
+        "is_active" => false,
+    ],
+    [
+        "name" => "Termini di servizio",
+        "is_active" => false,
+    ],
+    [
+        "name" => "Tecnologie",
+        "is_active" => false,
+    ],
+    [
+        "name" => "Domande frequenti",
+        "is_active" => true,
+    ],
+]
+
 //var_dump($faqs);
 
 
@@ -57,12 +80,21 @@ $faqs = [
 </head>
 
 <body>
-    <header class="border-bottom border-dark">SITE HEADER HERE</header>
-    <main>
+    <header id="site_header">
+        <nav class="border-bottom border-dark">
+            <div class="logo">
+                <img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" alt="">
+                <span class="fs-4">Privacy & Termini</span>
+            </div>
+        </nav>
+    </header>
+    <!-- /#site_header -->
+
+    <main id="site_main">
         <div class="container">
             <?php
             foreach ($faqs as $faq) : ?>
-                <h2 class="my-4"><?= $faq['question'] ?></h2>
+                <h4 class="my-4"><?= $faq['question'] ?></h4>
                 <?php
                 foreach ($faq['answer_paragraphs'] as $answer_paragraph) : ?>
                     <p class="my-4"><?= $answer_paragraph ?></p>
@@ -70,6 +102,7 @@ $faqs = [
             <?php endforeach ?>
         </div>
     </main>
+    <!-- /#site_main -->
 
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
